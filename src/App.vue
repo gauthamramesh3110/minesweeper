@@ -14,6 +14,21 @@
           @change="setDifficulty(difficulty)"
         ></v-select>
       </v-form>
+      <v-list subheader nav dense class="caption">
+        <v-subheader>Rules</v-subheader>
+        <v-list-item >
+          <v-list-item-content>1. Goal of the game is to flag all the bombs.</v-list-item-content>
+        </v-list-item>
+        <v-list-item >
+          <v-list-item-content>2. Right Click to Flag.</v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>3. Left Click to Open Tile.</v-list-item-content>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-content>4. Game over if you open a tile with bomb.</v-list-item-content>
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
     <v-content>
       <v-container fluid class="fill-height">
