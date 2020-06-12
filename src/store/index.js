@@ -126,9 +126,13 @@ export default new Vuex.Store({
 
       if (state.totalBombs == state.totalFlagged) {
         state.gameOngoing = false;
+        state.gameWon = true;
         for (let i = 0; i < state.currentGridSize; i++) {
           for (let j = 0; j < state.currentGridSize; j++) {
             state.gridData[i][j].isOpened = true;
+            if(state.gridData[i][j].hasBomb && !state.gridData[i][j].isFlagged){
+              state.gameWon = false
+            }
           }
         }
       }
