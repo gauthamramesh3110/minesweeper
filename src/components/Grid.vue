@@ -22,7 +22,6 @@
             <v-card
               :elevation="gridData[i-1][j-1].isOpened ? 0 : 5"
               :color="(gridData[i-1][j-1].isFlagged && gameOngoing) ? 'blue' : 'white'"
-              ripple
               class="ma-1"
               @click="onClick([i-1, j-1])"
               @contextmenu.prevent="flag([i-1, j-1])"
